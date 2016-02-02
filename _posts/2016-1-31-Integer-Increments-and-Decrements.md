@@ -5,7 +5,7 @@ title: Integer Increments and Decrements
 
 In Javascript, often times a variable assigned a number needs to be incremented or decremented to keep track of a counter or to iterate through an array. There are several ways that a variable can be changed by a value. With such options it can be difficult to know when each option should be used.
 
-```
+```javascript
 // Method 1
 var i = 1;
 i = i + 1
@@ -14,7 +14,7 @@ console.log(i); // >> 2
 
 After Method 1 resolves, it is not surprising to find that `i` is equal to 2. A console log of `i` proves that. This is an intuitive method to increase the value of `i` by a some number. The method reads like a math equation and clearly demonstrates the intent of the expression.
 
-```
+```javascript
 // Method 2
 var j = 1;
 j += 1;
@@ -23,7 +23,7 @@ console.log(j); // >> 2
 
 Method 2 is also fairly intuitive. This is a shorthand version of Method 1 and accomplish the same increment. Additionally, the `-`, `*`, and `/` operators can also be used in the same way as the `+` operator.
 
-```
+```javascript
 //Method 3
 var k = 1;
 k++;
@@ -32,7 +32,7 @@ console.log(k); // >> 1
 
 This is unexpected. Why does `k` resolve to 1 after being acted upon by the `++` operation? The reason that `k` resolves to 1 after the `++` is because the current state of `k` is held onto before it is incremented. The current state of `k` is returned and then `k` is set to its new value. This causes `k` to only resolve to its incremented value after its current state has been used.
 
-```
+```javascript
 //Method 3
 var k = 1;
 k++;
@@ -42,7 +42,7 @@ console.log(k); // >> 2
 
 Method 3 shows up often in for-loops iterating over arrays.
 
-```
+```javascript
 for( var k = 0; k < myArray.length; k++) {
   console.log(myArray[k]); 
 }
@@ -50,7 +50,7 @@ for( var k = 0; k < myArray.length; k++) {
 
 When the conditions of the for-loop are set on the first iteration, `k` will remain equal to 0 until the code block is finished. When the conditions of the for-loop are set for the second iteration, the new value of `k` is used and is equal to 1.
 
-```
+```javascript
 // Method 4
 var m = 1;
 ++m;
