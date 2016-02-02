@@ -4,6 +4,7 @@ title: Integer Increments and Decrements
 ---
 
 In Javascript, often times a variable assigned a number needs to be incremented or decremented to keep track of a counter or to iterate through an array. There are several ways that a variable can be changed by a value. With such options it can be difficult to know when each option should be used.
+
 ```
 // Method 1
 var i = 1;
