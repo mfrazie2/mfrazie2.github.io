@@ -59,4 +59,26 @@ console.log(m); // >> 2
 
 Method 4 looks strikingly similar to Method 3. Both use the `++` operator , but have them positioned on opposite sides of the variable. In Method 4, `m` is incremented first, and then its state is returned. This causes `m` to immediately resolve to its incremented value. Additionally, Methods 3 and 4 can be used with the `--` operator, following the same pattern as above.
 
+The effects of Method 3 and 4 may be more easily seen in an example. 
+
+```javascript
+// Method 3 
+var x = 1;
+var y = x++;
+
+console.log(y); // >> 1
+console.log(x); // >> 2
+```
+Here, `y` is assigned to the initial value of `x` and then `x` is incremented. Therefore, `y` is assigned the value of 1 and `x` increments and resolves to 2. 
+
+```javascript
+// Method 4
+var w = 1;
+var z = ++w;
+
+console.log(w); // >> 2
+console.log(z); // >> 2
+```
+In this case, `w` is incremented first and resolves to 2. Variable `z` is then assigned the value of `w`, which is 2. 
+
 Each method has its place in JavaScript. As a developer, you must choose the method that makes the most sense to you and to anyone, including yourself, that may look at your code down the line.
