@@ -2,16 +2,16 @@
 layout: post
 title: ngShow Directive
 ---
-On a recent project, my team and I implemented a web forum to persist questions and resources that can be lost on a very active Slack community. In the forum, users can ask questions, respond with comments, and vote on comments. An additional feature we included was a snapshot of questions from Stackoverflow related to a specific topic. The Stackoverflow API would return upwards of 30 questions which extended the length of the page by quite a bit. To keep the page to a manageable length on load, I used the `ngShow` directive included in AngularJS to allow users to click show and hide buttons. 
+On a recent project, my team and I implemented a web forum to persist questions and resources that can be lost in a very active Slack community. In the forum, users can ask questions, respond with comments, and vote on comments. An additional feature we included was a snapshot of questions from Stackoverflow related to a specific topic. The Stackoverflow API would return upwards of 30 questions which extends the length of the page quite a bit. To keep the page at a manageable length on load, I incorporated show and hide buttons that manipulate an AngularJS model and the `ngShow` directive. 
 
 `ngShow` is a directive that shows or hides HTML elements based on the expression passed to the directive. Here is an example: 
 
 ```html
 <div ng-show="3 > 2">
-	<p> This will be visible because 3 > 2 evaluates to true. </p>
+  <p> This will be visible because 3 > 2 evaluates to true. </p>
 </div>
 <div ng-show="3 < 2">
-	<p> This will not be visible because 3 < 2 evaluates to false. </p>
+  <p> This will not be visible because 3 < 2 evaluates to false. </p>
 </div>
 ```
 
@@ -21,10 +21,10 @@ Additionally, the `ngShow` directive can be used with models set on the `$scope`
 
 ```html
 <div ng-show="truthy">
-	<p> This will be visible because `$scope.truthy` evaluates to true. </p>
+  <p> This will be visible because "$scope.truthy" evaluates to true. </p>
 </div>
 <div ng-show="falsy">
-        <p> This will not be visible because `$scope.falsy` evaluates to false. </p>
+  <p> This will not be visible because "$scope.falsy" evaluates to false. </p>
 </div>
 ```
 
@@ -39,18 +39,18 @@ $scope.falsy = false;
 
 When the page renders, the models are passed to the expression. Because `$scope.truthy` is set to `true`, that `div` renders to the page. 
 
-Lastly, click events on the page can also change the boolean value of a model, thereby changing what is rendered to the client. 
+Lastly, click events on the page can be used to change the boolean value of a model, thereby changing what is rendered to the client. 
 
 ```html
 <div ng-model="showList">
-	<a ng-click='showList = true'> Show </a> | <a ng-click='showList = false'> Hide </a>
-     	<ul ng-show='showList'>
-        	<li> This will not visible until `show` is clicked.</li>
-       		<li> This will go away when `hide` is clicked.</li>
-      	</ul>
+  <a ng-click='showList = true'> Show </a> | <a ng-click='showList = false'> Hide </a>
+    <ul ng-show='showList'>
+      <li> This will not visible until `show` is clicked.</li>
+      <li> This will go away when `hide` is clicked.</li>
+    </ul>
 </div>
 ```
 
-The `div` wrapper tag is given a `model` called `showList`. The `a` tags contain two click events: one event sets `showList` to `true`, while the other sets it to `false`. The `ul` tag has the `ng-show` directive that is evaluate the `showList` model. When the page first renders, `showList` is initially set to a falsy value. When the `Show` tag is pressed, `showList` is assigned `true` and the list appears. When `Hide` is pressed, `showList` is assigned false and the list disappears. 
+The `div` wrapper tag is given a `model` called `showList`. The `a` tags contain two click events: one event sets `showList` to `true`, while the other sets it to `false`. The `ul` tag has the `ng-show` directive which evaluates the `showList` model. When the page first renders, `showList` is initially set to a falsy value. When the `Show` tag is pressed, `showList` is assigned `true` and the list appears. When `Hide` is pressed, `showList` is assigned false and the list disappears. 
 
-This is a quick and easy method to hide elements on your page using the `ngShow` directive provided by AngularJS. Please visit ngShow Demo for an interactive page and to examine the code in greater detail. 
+This is a quick and easy method to hide elements on your page using the `ngShow` directive provided by AngularJS. Please visit [ngShow Demo](http://codepen.io/mfrazier/full/eZJQyJ/) for an interactive page and to examine the code in greater detail. 
