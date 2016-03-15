@@ -12,6 +12,7 @@ To start off this problem, my partner and I discussed the major differences betw
 In a cycle, the `next` property will always be truthy because the nodes point in a circle. At some point while traversing the list, the same `data` value will be encountered. Because all `data` values are unique, once a non-unique value is encountered the existence of a cycle is confirmed. The second `7` is the start of the cycle. To keep track of the unique values, we could use a hash table or JavaScript object. There is a chance that the provided head node will be in a linear list, so we need to make sure that we take that into consideration. If `node.next` is falsy, then we know the list does not contain a cycle. 
 
 Let's take a look at some pseudocode. 
+
 ```javascript
 // declare function that takes in a head node of a linked list
   // create a storage hash table to hold unique data values
@@ -24,6 +25,7 @@ Let's take a look at some pseudocode.
 ```
 
 Transformed into code:
+
 ```javascript
 function containsCycle(node) {
   var uniqueVals = {};
