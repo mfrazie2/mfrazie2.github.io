@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a former chemist making the transition to software engineering. I am currently a student in Hack Reactor Remote and eagar to begin a new career. 
+I am a former chemist turned software engineer. I am currently a Hacker in Residence at Hack Reactor. 
 
 
 
