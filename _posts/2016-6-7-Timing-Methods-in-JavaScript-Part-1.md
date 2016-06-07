@@ -1,20 +1,21 @@
---- 
+---
 layout: post 
-title: Timing Methods in JavaScript: Part 1 
+title: Timing Methods in JavaScript: Part 1
 ---
 
 I often wonder how long it takes the interpreter to actually run my code. With
 the exception of infinitely recursive functions, I don't have 
 a strong idea about the actual computational time required to iterate over an array and build a
-string versus using a native method on an array, for example. I found a couple of ways to
-determine the time required to run a code block.
+string versus using a native method on an array, for example. 
 
-In Part 1 of this post, timers in `console` object will be explored and utilized to 
+In Part 1 of this post, timers in the `console` object will be explored and utilized to 
 test the run time of some code snippets. In Part 2, a `SpeedTest` constructor will
-be built and used.
+be built and used on the same snippets. 
+
+---
 
 Consider the following code block. I encourage you to try this out in your
-browser. *Note:* I tested the code snippets below in Chrome. Not all of the
+browser. __*Note:*__ I tested the code snippets below in Chrome. Not all of the
 `console` methods are standard and may not function the same across all
 browsers.
 
@@ -103,7 +104,7 @@ With the timers added, the run times can be compared.
 
 ![Loop versus Join](/images/TimingImages/LoopvJoinTimers.png)
 
-The `for` loop takes longer than the native `.join` method. However, running the functions once
+The `for` loop takes *slightly* longer than the native `.join` method. However, running the functions once
 doesn't offer much in the way of meaningful insight regarding which is, on average, faster. 
 
 In order to determine the average time, the output times must be recorded manually. The times 
