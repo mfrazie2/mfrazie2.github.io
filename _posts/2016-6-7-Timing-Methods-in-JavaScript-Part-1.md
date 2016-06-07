@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: Timing Methods in JavaScript: Part 1
+title: Timing Methods in JavaScript, Part 1
 ---
 I sometimes wonder how long it takes the interpreter to actually run my code. With the exception of infinitely recursive functions, I don't have a strong idea about the actual computational time required to iterate over an array and build a string versus using a native method on an array, for example. 
 
