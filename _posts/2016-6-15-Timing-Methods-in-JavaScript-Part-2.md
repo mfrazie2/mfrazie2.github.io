@@ -45,7 +45,7 @@ SpeedTest.prototype.startTest = function () {
 
 The return value from the `startTest` method is the average run-time, which is simply the total time divided by the number of repetitions. 
 
-===
+---
 
 Let’s pull in the two functions we want to test. The functions have been refactored slightly to take a single argument array, containing any arguments required for the function.
 
