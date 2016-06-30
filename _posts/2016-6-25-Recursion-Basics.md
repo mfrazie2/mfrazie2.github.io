@@ -130,7 +130,7 @@ function factorial (n) {
 
 We have two checks in the `factorial` function. We want to first check if the argument, `n`, is less than 0; if it is, throw an error and stop the function. If the number is not less than 0 but equals 0, return the number 1. These steps match the edge cases we identified earlier. We have one last case to cover and that is when the number is greater than 0. 
 
-Let's consider a use case for the function: `factorial(5)`. We know we must somehow end up with the following chain of multiplication: 5 * 4 * 3 * 2 * 1. If `n === 5` at the first function call, then the next recursive call would be when ` n === 4` which is `factorial(n - 1)`. In this function `n === 4` and the next recursive call would result in 3 being the argument. This pattern continues down until the argument is 0. At that point, `factorial(0)` returns 1 and the recursive calls begin to close. 
+Let's consider a use case for the function: `factorial(5)`. We know we must somehow end up with the following chain of multiplication: 5 * 4 * 3 * 2 * 1. If `n === 5` at the first function call, then the next recursive call would be when `n === 4` which is `factorial(n - 1)`. In this function `n === 4` and the next recursive call would result in 3 being the argument. This pattern continues down until the argument is 0. At that point, `factorial(0)` returns 1 and the recursive calls begin to close. 
 
 ```
 5 * factorial(4)
