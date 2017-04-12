@@ -10,4 +10,4 @@ I am a former chemist turned software engineer. I am currently a Hacker in Resid
 
 ### Contact me
 
-[Drop me a line!](mailto:)
+[Drop me a line!](mailto:me@mikedoescoding.com)
