@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a former chemist turned software engineer. I am currently a Hacker in Residence at Hack Reactor. 
+I currently work at [ClickFox](https://www.clickfox.com/) as a software engineer building UIs within the Angular ecosystem. Formerly, I was a scientist and educator. I enjoy discovering new features, libraries, hacks and more in web development and blogging about them. I want to share what I learn. 
 
 
 
